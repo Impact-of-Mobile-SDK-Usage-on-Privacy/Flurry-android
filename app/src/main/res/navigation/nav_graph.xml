@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/Nothing">
+
+    <fragment
+        android:id="@+id/Nothing"
+        android:name="de.tubs.cs.ias.flutebe.Nothing"
+        android:label="Nothing"
+        tools:layout="@layout/fragment_nothing">
+
+        <action
+            android:id="@+id/action_Nothing_to_CreateObject"
+            app:destination="@id/CreateObject" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CreateObject"
+        android:name="de.tubs.cs.ias.flutebe.CreateObject"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_create_object">
+
+        <action
+            android:id="@+id/action_CreateObject_to_Consent"
+            app:destination="@id/Consent" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Consent"
+        android:name="de.tubs.cs.ias.flutebe.Consent"
+        android:label="Consent"
+        tools:layout="@layout/fragment_consent">
+
+        <action
+            android:id="@+id/action_Consent_to_Init"
+            app:destination="@id/Init" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Init"
+        android:name="de.tubs.cs.ias.flutebe.Init"
+        android:label="Init"
+        tools:layout="@layout/fragment_init">
+
+        <action
+            android:id="@+id/action_Init_to_BasicFunc"
+            app:destination="@id/BasicFunc" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BasicFunc"
+        android:name="de.tubs.cs.ias.flutebe.BasicFunc"
+        android:label="Basic Func"
+        tools:layout="@layout/fragment_basic_func">
+        <action
+            android:id="@+id/action_BasicFunc_to_BasicFuncPost"
+            app:destination="@id/BasicFuncPost" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/BasicFuncPost"
+        android:name="de.tubs.cs.ias.flutebe.BasicFuncPost"
+        android:label="Basic Func Post"
+        tools:layout="@layout/fragment_basic_func_post">
+    </fragment>
+
+</navigation>
